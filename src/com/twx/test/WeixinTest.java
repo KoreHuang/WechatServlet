@@ -17,10 +17,10 @@ public class WeixinTest {
 			System.out.println("token:"+token.getToken());
 			System.out.println("expiresIn:"+token.getExpiresIn());
 			
-		/*	String filePath = "d:/1.jpg";
-			String media_id = WeixinUtil.upload(filePath, token.getToken(), "thumb");
-			System.out.println("media_id:"+media_id);*/
-			String menu = JSONObject.fromObject(WeixinUtil.initMenu()).toString();
+			/*String filePath = "d:/1.jpg";
+				String media_id = WeixinUtil.upload(filePath, token.getToken(), "thumb");
+				System.out.println("media_id:"+media_id);*/
+				String menu = JSONObject.fromObject(WeixinUtil.initMenu()).toString();
 			int result = WeixinUtil.createMenu(token.getToken(), menu);
 			if(result==0){
 				System.out.println("创建成功");
